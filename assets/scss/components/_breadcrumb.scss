@@ -1,0 +1,133 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.7 breadcrumb
+/*----------------------------------------*/
+
+// Breadcrumb style
+.breadcrumb-space {
+  padding: 302px 0 181px;
+}
+.breadcrumb__area {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.overly {
+    position: relative;
+    z-index: 1;
+    &:after {
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      content: "";
+      left: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(0, 22, 10, 0.50) 0%, #00160A 100%);
+    }
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(33, 33, 33, 0) 0%, rgba(33, 33, 33, 0.68) 60.5%, #212121 100%);
+    opacity: .8;
+  }
+}
+.breadcrumb__title {
+  color: var(--rr-common-white);
+  font-family: var(--rr-ff-heading);
+  font-weight: var(--rr-fw-regular);
+  font-size: 60px;
+  line-height: 64px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-style: normal;
+  position: relative;
+  z-index: 1;
+  @media #{$xxl} {
+    font-size: 60px;
+  }
+  @media #{$md, $lg} {
+    font-size: 46px;
+    line-height: 50px;
+  }
+  @media #{$sm} {
+    font-size: 44px;
+    line-height: 50px;
+  }
+  @media #{$xs} {
+    font-size: 34px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  @media #{$xxs} {
+    font-size: 32px;
+  }
+}
+.breadcrumb__menu {
+  ul {
+    @include inline-flex();
+    gap: 27px;
+    justify-content: center;
+    align-items: center;
+    li {
+      list-style: none;
+      position: relative;
+      line-height: 1;
+      &:not(:last-child) {
+        &::before {
+          display: inline-block;
+          content: "\f105";
+          position: absolute;
+          top: 55.8888%;
+          font-family: var(--rr-ff-fontawesome);
+          @extend %translateY1_2;
+          inset-inline-end: -17px;
+          color: var(--rr-common-white);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 16px;
+        }
+      }
+      span {
+          color:var(--rr-common-white);
+          font-family: var(--rr-ff-heading);
+          font-weight: var(--rr-fw-regular);
+          line-height: 26px;
+          font-size: 24px;
+          font-style: normal;
+        a {
+          &:hover {
+            color: var(--rr-theme-primary);
+          }
+        }
+      }
+      &.active {
+        span {
+          color:var(--rr-common-white);
+          font-family: var(--rr-ff-heading);
+          font-weight: var(--rr-fw-regular);
+          line-height: 26px;
+          font-size: 24px;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+.breadcrumb__shapes{
+  position: absolute;
+  top: 95px;
+  right: -75px;
+  z-index: 1;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+

@@ -1,0 +1,91 @@
+
+@use '../utils' as *;
+
+/*---------------------------------
+	1.8 spacing
+---------------------------------*/
+
+.section-space {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	@media #{$md} {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@media #{$sm,$xs} {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}
+.section-space-top {
+	padding-top: 120px;
+	@media #{$md} {
+		padding-top: 80px;
+	}
+	@media #{$sm,$xs} {
+		padding-top: 70px;
+	}
+}
+.section-space-bottom {
+	padding-bottom: 120px;
+	@media #{$md} {
+		padding-bottom: 80px;
+	}
+	@media #{$sm,$xs} {
+		padding-bottom: 70px;
+	}
+}
+
+//  mb-minus-30
+.mb-minus-30 {
+	margin-bottom: -30px;
+}
+.ml {
+	margin-left: 140px;
+}
+.fs-16{
+	font-size: 16px !important;
+}
+.pb-306{
+	padding-bottom: 306px;
+	@media #{$lg, $md, $sm, $xs} {
+		padding-bottom: 255px;
+	}
+}
+.pb-337{
+	padding-bottom: 337px !important;
+	@media #{$md, $sm, $xs} {
+		padding-bottom: 240px !important;
+	}
+}
+.mt-255{
+	margin-top: -183px;
+}
+.height-693{
+	height: 693px !important;
+	@media #{$xs} {
+		height: 450px !important;
+	}
+}
+.height-611{
+	height: 611px !important;
+	@media #{$xs} {
+		height: 400px !important;
+	}
+}
+
+.padding-b{
+	padding-bottom: 20px;
+	@media #{$lg, $md, $sm, $xs} {
+		padding-bottom: 0;
+	}
+}
+.padding-t85{
+	padding-top: 85px;
+	@media #{$sm, $xs} {
+		padding-top: 40px;
+	}
+	@media #{$lg, $md} {
+		padding-top: 60px;
+	}
+}

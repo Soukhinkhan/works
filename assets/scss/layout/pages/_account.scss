@@ -1,0 +1,165 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  8.12 account
+/*----------------------------------------*/
+
+.email{
+    &__content{
+        .title{
+            font-family: var(--rr-ff-heading);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 36px;
+            color: #0E1730;
+            margin-bottom: 20px;
+        }
+        .dec{
+            font-family: var(--rr-ff-body);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: #595959;
+            margin-bottom: 0;
+            @media #{$xl, $lg, $md, $sm, $xs} {
+                br{
+                    display: none;
+                }
+            }
+        }
+        &-form{
+            margin-top: 40px;
+            .title{
+                font-family: var(--rr-ff-heading);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                color: #0E1730;
+                margin-bottom: 20px;
+            }
+            .form-control{
+                outline: none;
+                margin-left: 0;
+                border-bottom: none;
+                border: 1px solid #E7E7EB;
+                width: 630px;
+                height: 60px;
+                box-shadow: none;
+                padding: 15px 30px;
+                @media #{$lg, $md, $sm, $xs} {
+                    width: 100%;
+                }
+            }
+            .btn{
+                background: var(--rr-theme-primary);
+                font-family: var(--rr-ff-heading);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                // line-height: 62px;
+                text-transform: capitalize;
+                color: #FFFFFF;
+                padding: 25px 80px;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 40px;
+                border-radius: 0;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background: var(--rr-heading-primary);
+                }
+            }
+        }
+    }
+    &__thumb{
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media #{$sm, $xs} {
+            margin-top: 30px;
+        }
+    }
+    &__gap{
+        border: 1px solid #E7E7EB;
+        padding: 57px;
+
+        @media #{$sm, $xs} {
+           border: none;
+           padding: 0;
+        }
+    }
+}
+.registration{
+    &__wrap{
+        .title{
+            font-family: var(--rr-ff-heading);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 50px;
+            text-transform: capitalize;
+            color: #0E1730;
+            margin-bottom: 20px;
+        }
+        .dec{
+            font-family: var(--rr-ff-body);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: #595959;
+            margin-bottom: 0;
+        }
+    }
+    &__form{
+        margin-top: 40px;
+        .title{
+            font-family: var(--rr-heading-primary);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+            color: #0E1730;
+            margin-bottom: 40px;
+        }
+    }
+    &__input{
+        input{
+            span{
+                font-family: var(--rr-ff-heading);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                color: #0E1730;
+                margin-bottom: 0;
+            }
+            background: #F7F7F7;
+            width: 100%;
+            padding: 15px 30px;
+            height: 60px;
+            margin-left: 0;
+            border-bottom: none;
+            border: none;
+            outline: none;
+            margin-top: 20px;
+        }
+    }
+    &__btn{
+        background: var(--rr-theme-primary);
+        color: var(--rr-common-white);
+        padding: 25px 97px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background: var(--rr-heading-primary);
+        }
+    }
+}
