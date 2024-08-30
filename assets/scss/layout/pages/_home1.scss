@@ -373,6 +373,7 @@
 /*latest-testimonial area start*/
 .testimonial{
     position: relative;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -445,7 +446,7 @@
           }
         .testimonial-prev{
             position: absolute;
-            left: 0;
+            left: 115px;
             top: 50%;
             transform: translate(50%, 0);
             z-index: 99;
@@ -460,9 +461,9 @@
 
         .testimonial-next{
             position: absolute;
-            right: 10px;
+            right: 155px;
             top: 50%;
-            transform: translate(50%, 0);
+            transform: translate(0, -50%);
             z-index: 99;
             font-size: 25px;
             color: #b3bbb5;
