@@ -14,12 +14,26 @@
         row-gap: 15px;
         align-items: center;
         justify-content: space-around;
+        &-2{
+            border: none;
+            margin-bottom: 0;
+            padding: 50px 0;
+        }
         &-item{
             display: inline-flex;
             align-items: center;
             gap: 10px;
             border: 1px solid #E7E7EB;
             padding: 15px 10px;
+            &-2{
+                gap: 73px;
+                padding: 22px 31px;
+                border: 2px solid #595959;
+                border-radius: 999px;
+                span{
+                    color: var(--rr-common-white);
+                }
+            }
             &-icon{
                 width: 50px;
                 height: 50px;
@@ -28,6 +42,25 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
+                &-2{
+                    width: inherit;
+                    height: inherit;
+                    border: none;
+                    border-radius: 0;
+                    .input-datepicker{
+                        input{
+                            margin-left: 0;
+                            border-bottom: 0;
+                            width: 103px;
+                            color: var(--rr-common-white);
+                            border: none;
+                            background: transparent;
+                            @include rs-placeholder {
+                                color: var(--rr-common-white);
+                            }
+                        }
+                    }
+                }
             }
 
             .room-seclect{
@@ -305,5 +338,16 @@
             background-color: var(--rr-heading-primary);
             color: var(--rr-common-white);
         }
+        &-2{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 999px;
+            padding: 16px 27px;
+        }
     }
+}
+.check{
+   background: #212121;
+   margin-top: -1px;
 }
