@@ -644,6 +644,36 @@ $('.client-testimonial__slider-nav').slick({
         }, 
     });
 
+     // Testimonial Carousel
+     var testimonialThumb = new Swiper(".testi-carousel", {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: true,
+        speed: 600,
+    });1
+
+    var testimonials = new Swiper(".testi-content-carousel", {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: true,
+        speed: 600,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".testimonial-next",
+            prevEl: ".testimonial-prev",
+        },
+        thumbs: {
+            swiper: testimonialThumb,
+        },
+    });
+
     const instagramwiper = new Swiper('.rr-instagram-2-active', {
         // Optional parameters
         loop: true,
