@@ -382,6 +382,12 @@
             display: none;
         }
     }
+    &-3{
+        background: #F7F7F7;
+        &::before{
+            display: none;
+        }
+    }
     &::before{
         background: rgb(14 23 48 / 60%);
         position: absolute;
@@ -509,6 +515,19 @@
                     line-height: 27px;
                     text-align: center;
                     margin-bottom: 0;
+                }
+            }
+        }
+        &-3{
+            .dec-3{
+                color: #0E1730;
+            }
+            .title-3{
+                h4{
+                    color: #0E1730;
+                }
+                h6{
+                    color: #595959;
                 }
             }
         }

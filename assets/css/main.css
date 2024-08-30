@@ -10248,6 +10248,12 @@ body .ui-tooltip {
 .testimonial-2::before {
   display: none;
 }
+.testimonial-3 {
+  background: #F7F7F7;
+}
+.testimonial-3::before {
+  display: none;
+}
 .testimonial::before {
   background: rgba(14, 23, 48, 0.6);
   position: absolute;
@@ -10368,6 +10374,15 @@ body .ui-tooltip {
   line-height: 27px;
   text-align: center;
   margin-bottom: 0;
+}
+.testimonial__content-3 .dec-3 {
+  color: #0E1730;
+}
+.testimonial__content-3 .title-3 h4 {
+  color: #0E1730;
+}
+.testimonial__content-3 .title-3 h6 {
+  color: #595959;
 }
 .testimonial__content .icon {
   background: var(--rr-theme-primary);
