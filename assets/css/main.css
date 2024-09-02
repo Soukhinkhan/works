@@ -6538,7 +6538,6 @@ body .ui-tooltip {
 
 /*banner-1*/
 .banner__slider {
-  position: absolute;
   width: 944px;
   height: 840px;
 }
@@ -9943,6 +9942,11 @@ body .ui-tooltip {
   align-items: center;
   gap: 36px;
 }
+@media (max-width:450px) {
+  .hotel__nav-tab {
+    gap: 22px;
+  }
+}
 .hotel__nav-tab button {
   font-family: var(--rr-ff-heading);
   color: var(--rr-heading-primary1);
@@ -10038,6 +10042,12 @@ body .ui-tooltip {
   top: 278px;
   left: 40px;
   transition: 0.3s;
+}
+@media (max-width:450px) {
+  .accomodation__box {
+    left: 0;
+    width: 100%;
+  }
 }
 .accomodation__box:hover {
   background: var(--rr-theme-primary);

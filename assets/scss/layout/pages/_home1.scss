@@ -44,6 +44,9 @@
         display: flex;
         align-items: center;
         gap: 36px;
+        @media #{$xxs} {
+            gap: 22px;
+          }
         button{
             font-family: var(--rr-ff-heading);
             color: var(--rr-heading-primary1);
@@ -145,8 +148,10 @@
         top: 278px;
         left: 40px;
         transition: .3s;
-
-
+        @media #{$xxs} {
+            left: 0;
+            width: 100%;
+          }
         &:hover{
             background: var(--rr-theme-primary);
             border: 1px solid var(--rr-theme-primary);

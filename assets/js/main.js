@@ -5,10 +5,10 @@
 
     /*-----------------------------------------------------------------------------------
 
-        Template Name: Immigration and Visa Consulting HTML5 Template
+        Template Name: BookTrip - Hotel booking HTML5 Template
         Author: RRDevs
         Support: https://support.rrdevs.net
-        Description: Immigration and Visa Consulting HTML5 Template
+        Description: BookTrip - Hotel booking HTML5 Template
         Version: 1.0
         Developer: Soukhin khan (https://github.com/Soukhinkhan)
 
@@ -66,60 +66,6 @@ var thumbs = new Swiper ('.gallery-thumbs', {
 
 slider.controller.control = thumbs;
 thumbs.controller.control = slider;
-
-/*client-testimonial__slider-content***/
-$('.client-testimonial__slider-content').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    spaceBetween: 30,
-    arrows: false,
-    fade: false,
-    dots: false,
-    asNavFor: '.client-testimonial__slider-nav, .client-testimonial__slider-thubnail',
-});
-
-/*client-testimonial__slider-nav***/
-$('.client-testimonial__slider-nav').slick({
-    slidesToShow: 3,
-    vertical: true,
-    slidesToScroll: 1,
-    asNavFor: '.client-testimonial__slider-content, .client-testimonial__slider-thubnail',
-    focusOnSelect: true,
-    verticalSwiping: true,
-    centerPadding: "0px",
-    centerMode:true,
-    arrows: false,
-    spaceBetween: 30,
-    responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 5,
-                vertical: false,
-                focusOnSelect: false,
-                verticalSwiping: false,
-            }
-        },
-        {
-            breakpoint: 381,
-            settings: {
-                slidesToShow: 3,
-                vertical: false,
-                focusOnSelect: false,
-                verticalSwiping: false,
-            }
-        },
-        {
-            breakpoint: 0,
-            settings: {
-                slidesToShow: 1,
-                vertical: false,
-                focusOnSelect: false,
-                verticalSwiping: false,
-            }
-        }
-    ]
-});
 
         function resourcesHubMasonry() {
             var $grid = $('.resources-hub__masonry');
@@ -238,36 +184,6 @@ $('.client-testimonial__slider-nav').slick({
     }
   });
 
-    /*** pricing table */
-    const pricingMonthlyBtn = $("#monthly-btn"),
-        pricingYearlyBtn = $("#yearly-btn"),
-        pricingValues = $(".pricing-card-price h2");
-
-    if (pricingMonthlyBtn[0] && pricingYearlyBtn[0] && pricingValues.length > 0) {
-        pricingMonthlyBtn[0].addEventListener("click", function () {
-            updatePricingValues("monthly");
-            pricingYearlyBtn[0].classList.remove("active");
-            pricingMonthlyBtn[0].classList.add("active");
-        });
-
-        pricingYearlyBtn[0].addEventListener("click", function () {
-            updatePricingValues("yearly");
-            pricingMonthlyBtn[0].classList.remove("active");
-            pricingYearlyBtn[0].classList.add("active");
-        });
-    }
-
-    function updatePricingValues(option) {
-        pricingValues.each(function () {
-            const pricingValue = $(this);
-            const yearlyValue = pricingValue.attr("data-yearly");
-            const monthlyValue = pricingValue.attr("data-monthly");
-
-            const newValue = option === "monthly" ? monthlyValue : yearlyValue;
-            pricingValue.html(newValue);
-        });
-    }
-
   /*======================================
 	MagnificPopup image view
 	========================================*/
@@ -347,138 +263,6 @@ $('.client-testimonial__slider-nav').slick({
         }, 300);
     });
 
-  /*======================================
-  Parallax Swiper
-  ========================================*/
-    var parallaxSlider;
-    var parallaxSliderOptions = {
-        speed: 1500,
-        autoplay: {
-            delay: 5000,
-        },
-        parallax: true,
-        loop: true,
-    
-        pagination: {
-            el: ".rs-slider-dot",
-            clickable: true,
-        },
-    
-        navigation: {
-            nextEl: ".slider__button-prev",
-            prevEl: ".slider__button-next",
-        },
-        on: {
-            init: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    $(swiper.slides[i])
-                        .find(".slider__thumb-bg")
-                        .attr({
-                            "data-swiper-parallax": 0.75 * swiper.width,
-                        });
-                }
-            },
-            resize: function() {
-                this.update();
-            },
-        },
-    };
-    parallaxSlider = new Swiper(
-        ".slider-prlx .parallax-slider",
-        parallaxSliderOptions
-    );
-
-    /*brand__active***/
-    var brand = new Swiper(".brand__active", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        roundLengths: true,
-        clickable: true,
-        autoplay: {
-            delay: 3000,
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 5,
-            },
-            992: {
-                slidesPerView: 4,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            576: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-    });
-
-    /*feedback__active***/
-    var feedback = new Swiper(".feedback__active", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        breakpoints: {
-            1400: {
-                slidesPerView: 4,
-            },
-            1199: {
-                slidesPerView: 3,
-            },
-            675: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-    });
-
-    /*feedback__active-2***/
-    var feedbacktwo = new Swiper(".feedback__active-2", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        navigation: {
-            prevEl: ".feedback-2__slider-button-prev",
-            nextEl: ".feedback-2__slider-button-next",
-        },
-        breakpoints: {
-            992: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-    });
-
-    /*======================================
-      feedback__active-3 js
-      ========================================*/
-    var feedbackThree = new Swiper(".feedback__active-3", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        pagination: {
-            el: ".rs-swiper-dot",
-            clickable: true,
-        }
-    });
 
 
     $('.grid').isotope({
@@ -489,13 +273,13 @@ $('.client-testimonial__slider-nav').slick({
         }
       })
 
-      var swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper(".resturent-slide", {
         slidesPerView: 3,
         spaceBetween: 30,
         loop: true,
         navigation: {
-            prevEl: ".blog__slider-button-prev",
-            nextEl: ".blog__slider-button-next",
+            prevEl: ".resturent__slider-button-prev",
+            nextEl: ".resturent__slider-button-next",
         },
         pagination: {
           el: ".swiper-pagination",
@@ -513,74 +297,6 @@ $('.client-testimonial__slider-nav').slick({
             },
         },
       });
-      
-      var swiper = new Swiper(".service-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".service__slider-button-prev",
-            nextEl: ".service__slider-button-next",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-            1201: {
-                slidesPerView: 3,
-            },
-            590: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-      });
-
-      var swiper = new Swiper(".project-slide", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".project__slider-button-prev",
-            nextEl: ".project__slider-button-next",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-
-      var projectSlide2 = new Swiper(".project-slide-2", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".project__slider-button-prev-2",
-            nextEl: ".project__slider-button-next-2",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-      var swiper = new Swiper(".rr-brand-active", {
-        slidesPerView: 'auto',
-        spaceBetween: 40,
-        loop: true,
-        freemode: true,
-        centeredSlides: true,
-        speed:4000,
-        allowTouchMove: false,
-        autoplay:{
-          delay: 1,
-          disableOnInteraction: true,
-        }
-      });
 
       // Project Style3
     if ($(".slider_hover__item li").length) {
@@ -594,9 +310,7 @@ $('.client-testimonial__slider-nav').slick({
             });
         });
     }
-
-
-      var swiper = new Swiper(".card-slide", {
+    swiper = new Swiper(".card-slide", {
         slidesPerView: 3,
         spaceBetween: 30,
         loop: true,
@@ -626,24 +340,6 @@ $('.client-testimonial__slider-nav').slick({
 		$(this).addClass('active').siblings().removeClass('active');
 	});
 
-    var testimonials = new Swiper(".testimonial__content", {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0,
-        loop: true,
-        autoplay: true,
-        speed: 600,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
-        },
-        navigation: {
-            nextEl: ".testimonial-next",
-            prevEl: ".testimonial-prev",
-        }, 
-    });
-
      // Testimonial Carousel
      var testimonialThumb = new Swiper(".testi-carousel", {
         slidesPerView: 1,
@@ -671,40 +367,6 @@ $('.client-testimonial__slider-nav').slick({
         },
         thumbs: {
             swiper: testimonialThumb,
-        },
-    });
-
-    const instagramwiper = new Swiper('.rr-instagram-2-active', {
-        // Optional parameters
-        loop: true,
-        slidesPerView: 5,
-        autoplay: true,
-        spaceBetween: 0,
-        breakpoints: {
-            '1400': {
-                slidesPerView: 5,
-            },
-            '1200': {
-                slidesPerView: 4,
-            },
-            '992': {
-                slidesPerView: 3,
-            },
-            '768': {
-                slidesPerView: 2,
-            },
-            '576': {
-                slidesPerView: 2,
-            },
-            '0': {
-                slidesPerView: 1,
-            },
-
-            a11y: false,
-        },
-        navigation: {
-            prevEl: '.slider-prev',
-            nextEl: '.slider-next',
         },
     });
 
